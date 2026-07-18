@@ -1,7 +1,18 @@
 {
   "name": "@narthia/toolkit",
   "version": "0.0.1",
-  "description": "Narthia's shared toolkit — oxc configs, OpenAPI helpers, and more.",
+  "description": "Narthia's shared toolkit and Oxc configuration presets.",
+  "keywords": [
+    "developer-tools",
+    "formatting",
+    "linting",
+    "narthia",
+    "oxc",
+    "oxfmt",
+    "oxlint",
+    "toolkit",
+    "typescript"
+  ],
   "homepage": "https://github.com/narthia/toolkit#readme",
   "bugs": {
     "url": "https://github.com/narthia/toolkit/issues"
@@ -16,7 +27,9 @@
     "url": "git+https://github.com/narthia/toolkit.git"
   },
   "files": [
-    "dist"
+    "dist",
+    "README.md",
+    "CHANGELOG.md"
   ],
   "type": "module",
   "exports": {
@@ -35,7 +48,6 @@
     "check": "vp check",
     "check:fix": "vp check --fix",
     "dev": "vp pack --watch",
-    "prepare": "vp config",
     "prepublishOnly": "vp run check && vp run build"
   },
   "devDependencies": {
