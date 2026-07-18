@@ -9,83 +9,30 @@ time.
 ## Installation
 
 ```bash
+# npm
+npm install @narthia/toolkit
+
+# pnpm
+pnpm add @narthia/toolkit
+
+# bun
 bun add @narthia/toolkit
+
+# yarn
+yarn add @narthia/toolkit
 ```
 
 ## Usage
 
 ### Oxc configuration
 
-The shared Oxc configuration can be used directly with Oxfmt and Oxlint, or
-through Vite+. Install the toolkit and the tools referenced by the shared
-configuration:
-
-```bash
-bun add @narthia/toolkit
-bun add -D oxfmt oxlint oxlint-tsgolint eslint-plugin-check-file
-```
-
-`eslint-plugin-check-file` is required because the shared Oxlint configuration
-loads it as a JavaScript plugin.
-
-The `oxc-config` subpath exports the shared Oxfmt and Oxlint configuration
-objects:
-
-```ts
-import { oxfmtConfig, oxlintConfig } from "@narthia/toolkit/oxc-config";
-```
-
-#### Oxfmt and Oxlint
-
-For Oxfmt, export the shared object from your `oxfmt.config.ts`:
-
-```ts
-import { oxfmtConfig } from "@narthia/toolkit/oxc-config";
-
-export default oxfmtConfig;
-```
-
-For Oxlint, extend the shared object from your `oxlint.config.ts`:
-
-```ts
-import { defineConfig } from "oxlint";
-import { oxlintConfig } from "@narthia/toolkit/oxc-config";
-
-export default defineConfig({
-  extends: [oxlintConfig],
-});
-```
-
-#### Vite+
-
-If you use Vite+, also install it:
-
-```bash
-bun add -D vite-plus
-```
-
-Then use the exported objects in your `vite.config.ts`:
-
-```ts
-import { defineConfig } from "vite-plus";
-import { oxfmtConfig, oxlintConfig } from "@narthia/toolkit/oxc-config";
-
-export default defineConfig({
-  lint: {
-    ...oxlintConfig,
-  },
-  fmt: {
-    ...oxfmtConfig,
-  },
-});
-```
-
-The exported objects provide Narthia’s shared defaults, plugins, and rules while
-remaining available for project-specific extension.
+The Oxc configuration documentation is maintained separately in the
+[Oxc configuration README](https://github.com/narthia/toolkit/blob/main/src/oxc-config/README.md).
+It covers installation, Oxfmt, Oxlint, Vite+, and project-level overrides.
 
 ### Toolkit check
 
-The package also exports a small `poke()` helper:
+The package exports a small `poke()` helper:
 
 ```ts
 import { poke } from "@narthia/toolkit";
@@ -102,33 +49,3 @@ installation or package-resolution check.
 | ----------------------------- | --------------------------------- |
 | `@narthia/toolkit`            | `packageName`, `subpaths`, `poke` |
 | `@narthia/toolkit/oxc-config` | `oxfmtConfig`, `oxlintConfig`     |
-
-## Development
-
-This project uses [Vite+](https://viteplus.dev/guide/) for package management,
-formatting, linting, type checking, and builds. If `vp` is not installed, see
-the [Vite+ installation guide](https://viteplus.dev/guide/#install-vp).
-
-Install dependencies:
-
-```bash
-vp install
-```
-
-Run formatting, linting, and type checks:
-
-```bash
-vp check
-```
-
-Build the package:
-
-```bash
-vp run build
-```
-
-Run the test suite, when tests are present:
-
-```bash
-vp test
-```

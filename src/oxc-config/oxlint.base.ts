@@ -18,7 +18,7 @@ export const oxlintConfig: OxlintConfig = {
   ],
   jsPlugins: ["eslint-plugin-check-file"],
   rules: {
-    "eslint/no-unused-vars": "error",
+    "eslint/no-unused-vars": ["error"],
     "prefer-template": "error",
     "unicorn/prefer-node-protocol": "error",
     "check-file/filename-naming-convention": [
@@ -26,9 +26,7 @@ export const oxlintConfig: OxlintConfig = {
       {
         "**/*.{ts,tsx}": "KEBAB_CASE",
       },
-      {
-        ignoreMiddleExtensions: true,
-      },
+      { ignoreMiddleExtensions: true },
     ],
     "check-file/folder-naming-convention": [
       "error",
@@ -37,8 +35,29 @@ export const oxlintConfig: OxlintConfig = {
       },
     ],
     "eslint/no-console": "warn",
+    "eslint/prefer-rest-params": "error",
+    "eslint/no-case-declarations": "error",
+    "eslint/no-var": "error",
     "node/no-process-env": "error",
+    "import/no-unassigned-import": [
+      "error",
+      {
+        allow: ["**/*.css"],
+      },
+    ],
+    "import/consistent-type-specifier-style": ["error", "prefer-top-level"],
+    "typescript/consistent-type-imports": [
+      "error",
+      {
+        prefer: "type-imports",
+        fixStyle: "separate-type-imports",
+      },
+    ],
     "typescript/no-explicit-any": "error",
+    "typescript/ban-ts-comment": "warn",
+    "typescript/no-require-imports": "error",
+    "typescript/no-unnecessary-type-constraint": "warn",
+    "typescript/require-await": "warn",
   },
   options: {
     typeAware: true,
