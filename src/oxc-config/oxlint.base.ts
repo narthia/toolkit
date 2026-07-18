@@ -1,6 +1,6 @@
 import type { OxlintConfig } from "oxlint";
 
-export const platformOxlintConfig: OxlintConfig = {
+export const oxlintConfig: OxlintConfig = {
   categories: {
     correctness: "warn",
   },

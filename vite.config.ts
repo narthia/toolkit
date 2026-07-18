@@ -1,6 +1,6 @@
 import { defineConfig } from "vite-plus";
-import { platformOxfmtConfig } from "./src/oxc-config/oxfmt.base.ts";
-import { platformOxlintConfig } from "./src/oxc-config/oxlint.base.ts";
+import { oxfmtConfig } from "./src/oxc-config/oxfmt.base.ts";
+import { oxlintConfig } from "./src/oxc-config/oxlint.base.ts";
 
 export default defineConfig({
   staged: {
@@ -20,9 +20,9 @@ export default defineConfig({
     exports: true,
   },
   lint: {
-    ...platformOxlintConfig,
+    ...oxlintConfig,
   },
   fmt: {
-    ...platformOxfmtConfig,
+    ...oxfmtConfig,
   },
 });

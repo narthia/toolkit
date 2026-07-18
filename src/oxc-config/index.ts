@@ -1,2 +1,2 @@
-export { platformOxlintConfig } from "./oxlint.base.ts";
-export { platformOxfmtConfig } from "./oxfmt.base.ts";
+export { oxlintConfig } from "./oxlint.base.ts";
+export { oxfmtConfig } from "./oxfmt.base.ts";

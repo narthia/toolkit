@@ -1,6 +1,6 @@
 import type { OxfmtConfig } from "oxfmt";
 
-export const platformOxfmtConfig: OxfmtConfig = {
+export const oxfmtConfig: OxfmtConfig = {
   tabWidth: 2,
   semi: true,
   singleQuote: false,
