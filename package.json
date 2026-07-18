@@ -1,6 +1,6 @@
 {
   "name": "@narthia/toolkit",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A reusable TypeScript toolkit with shared configuration and developer utilities.",
   "keywords": [
     "developer-tools",
