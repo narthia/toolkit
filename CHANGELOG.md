@@ -1,5 +1,11 @@
 # @narthia/toolkit
 
+## 0.0.3
+
+### Patch Changes
+
+- 417af96: Added new rules in oxlint.
+
 ## 0.0.2
 
 ### Patch Changes
