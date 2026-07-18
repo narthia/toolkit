@@ -9,9 +9,6 @@ export default defineConfig({
   },
   pack: {
     entry: ["src/index.ts", "src/*/index.ts"],
-    dts: {
-      tsgo: true,
-    },
     deps: {
       neverBundle: ["oxfmt", "oxlint"],
       dts: {
