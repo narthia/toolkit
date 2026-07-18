@@ -38,6 +38,6 @@ jobs:
       - name: Create release pull request or publish to npm
         uses: changesets/action@v1
         with:
-          version: bun run changeset:version
-          publish: bun run changeset:publish
+          version: vp run changeset:version
+          publish: vp run changeset:publish
           github-token: ${{ secrets.GITHUB_TOKEN }}
