@@ -4,7 +4,8 @@ import { oxlintConfig } from "./src/oxc-config/oxlint.base.ts";
 
 export default defineConfig({
   staged: {
-    "*": "vp check",
+    // Allow non-lintable staged files such as README.md and package.json.
+    "*": "vp check --fix --no-error-on-unmatched-pattern",
   },
   pack: {
     entry: ["src/index.ts", "src/*/index.ts"],
