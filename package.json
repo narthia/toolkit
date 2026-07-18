@@ -1,7 +1,7 @@
 {
   "name": "@narthia/toolkit",
   "version": "0.0.1",
-  "description": "Narthia's shared toolkit and Oxc configuration presets.",
+  "description": "A reusable TypeScript toolkit with shared configuration and developer utilities.",
   "keywords": [
     "developer-tools",
     "formatting",
