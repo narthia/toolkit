@@ -1,5 +1,11 @@
 # @narthia/toolkit
 
+## 0.0.4
+
+### Patch Changes
+
+- f15d86a: Update dependencies in bun.lock and package.json, including upgrades to oxfmt, and oxlint. Add sideEffects flag to package.json for improved tree-shaking.
+
 ## 0.0.3
 
 ### Patch Changes
